@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	admin "github.com/TykTechnologies/raava-admin"
-	. "github.com/TykTechnologies/raava-admin/tests/dummy"
+	admin "github.com/TykTechnologies/dev-portal-admin"
+	. "github.com/TykTechnologies/dev-portal-admin/tests/dummy"
 	"github.com/qor/qor"
 	"github.com/qor/roles"
 )

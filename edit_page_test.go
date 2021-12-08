@@ -6,7 +6,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	. "github.com/TykTechnologies/raava-admin/tests/dummy"
+	. "github.com/TykTechnologies/dev-portal-admin/tests/dummy"
 	qorTestUtils "github.com/qor/qor/test/utils"
 	"github.com/theplant/htmltestingutils"
 )
