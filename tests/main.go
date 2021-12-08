@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/TykTechnologies/dev-portal-admin/tests/dummy"
+	"github.com/TykTechnologies/portal-admin/tests/dummy"
 	"github.com/qor/qor/utils"
 )
 

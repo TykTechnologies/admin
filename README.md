@@ -28,7 +28,7 @@ import (
   "net/http"
   "github.com/jinzhu/gorm"
   _ "github.com/mattn/go-sqlite3"
-  admin "github.com/TykTechnologies/dev-portal-admin"
+  admin "github.com/TykTechnologies/portal-admin"
 )
 
 // Create a GORM-backend model
@@ -88,10 +88,10 @@ adm.GetRouter().PrintRoutes()
 QOR was developed before go mod was introduced. So it still support go path while finding its template files. The priority is
 
 1. check vendor, if not found
-2. check $GOPATH/src/github.com/TykTechnologies/dev-portal-admin/views, if still not found
-3. load view path from $GOPATH/pkg/mod/github.com/TykTechnologies/dev-portal-admin@v0.x/views. the version would be detected automatically by you go.sum file
+2. check $GOPATH/src/github.com/TykTechnologies/portal-admin/views, if still not found
+3. load view path from $GOPATH/pkg/mod/github.com/TykTechnologies/portal-admin@v0.x/views. the version would be detected automatically by you go.sum file
 
-So if you want to use the template under the pkg/mod, make sure $GOPATH/src/github.com/TykTechnologies/dev-portal-admin is absent.
+So if you want to use the template under the pkg/mod, make sure $GOPATH/src/github.com/TykTechnologies/portal-admin is absent.
 
 ## License
 
@@ -108,7 +108,7 @@ npm install && npm install -g gulp
 * Build Release files: `gulp release`
 
 # Update Developer Portal to use the latest version
-We need the latest commit hash from `dev-portal-admin` repo. You can get it from the GitHub repo, or:
+We need the latest commit hash from `portal-admin` repo. You can get it from the GitHub repo, or:
 
 ### From a local copy
 We need to have the latest version of the `master` branch
@@ -123,5 +123,5 @@ $ git log -1 --format='%H'
 
 Now that we got the commit hash, we need to move to the local `developer portal` folder and do this
 ```bash
-$ go get github.com/TykTechnologies/dev-portal-admin@<commit-hash-here>
+$ go get github.com/TykTechnologies/portal-admin@<commit-hash-here>
 ```

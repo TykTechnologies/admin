@@ -1,4 +1,4 @@
-module github.com/TykTechnologies/dev-portal-admin
+module github.com/TykTechnologies/portal-admin
 
 go 1.13
 

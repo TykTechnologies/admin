@@ -6,8 +6,8 @@ import (
 	"errors"
 	"testing"
 
-	admin "github.com/TykTechnologies/dev-portal-admin"
-	. "github.com/TykTechnologies/dev-portal-admin/tests/dummy"
+	admin "github.com/TykTechnologies/portal-admin"
+	. "github.com/TykTechnologies/portal-admin/tests/dummy"
 	"github.com/jinzhu/gorm"
 	"github.com/jinzhu/now"
 	qorTestUtils "github.com/qor/qor/test/utils"
