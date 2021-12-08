@@ -1,7 +1,7 @@
 package main
 
 import (
-	admin "github.com/TykTechnologies/raava-admin"
+	admin "github.com/TykTechnologies/portal-admin"
 	"github.com/jinzhu/gorm"
 	_ "github.com/mattn/go-sqlite3"
 

@@ -3,7 +3,7 @@ package dummy
 import (
 	"fmt"
 
-	admin "github.com/TykTechnologies/raava-admin"
+	admin "github.com/TykTechnologies/portal-admin"
 	"github.com/qor/media"
 	"github.com/qor/qor"
 	"github.com/qor/qor/test/utils"

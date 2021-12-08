@@ -4,9 +4,9 @@ import (
 	"reflect"
 	"testing"
 
-	. "github.com/TykTechnologies/raava-admin/tests/dummy"
+	. "github.com/TykTechnologies/portal-admin/tests/dummy"
 
-	admin "github.com/TykTechnologies/raava-admin"
+	admin "github.com/TykTechnologies/portal-admin"
 	"github.com/qor/qor"
 	"github.com/qor/qor/resource"
 )

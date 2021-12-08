@@ -5,7 +5,7 @@ import (
 	"errors"
 	"testing"
 
-	admin "github.com/TykTechnologies/raava-admin"
+	admin "github.com/TykTechnologies/portal-admin"
 )
 
 func TestXMLTransformerEncode(t *testing.T) {
