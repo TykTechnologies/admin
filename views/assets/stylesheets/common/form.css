@@ -169,9 +169,14 @@
 .qor-form-section-description {
 	font-family: "OpenSans-Regular", sans-serif;
 	font-size: var(--size-sm);
-	font-weight: normal;
-	margin: var(--size-sm) 0 0 var(--size-xl);
+  color: var(--secondary);
+  margin-top: var(--size-sm);
 }
+
+.qor-form-section-description ul {
+  color: var(--default-text-color);
+}
+
 
 .bottom-separator > .qor-fieldset {
 	border-bottom: 1px solid var(--default-light);
