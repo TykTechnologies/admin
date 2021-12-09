@@ -173,6 +173,8 @@
   margin-top: var(--size-sm);
 }
 
+.qor-form-section-description div,
+.qor-form-section-description ol,
 .qor-form-section-description ul {
   color: var(--default-text-color);
 }
