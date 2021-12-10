@@ -66,3 +66,10 @@ function revealValue(elemId, emelValueId) {
   if (codeRefEl.value === codeRefElValue.value) codeRefEl.value = '******';
   else codeRefEl.value = codeRefElValue.value
 }
+
+function toggleModal(id) {
+  var modal = document.getElementById(id);
+  modal.classList.contains('hidden') ? modal.classList.remove('hidden') : modal.classList.add('hidden');
+  modal.classList.contains('show') ? modal.classList.remove('show') : modal.classList.add('show');
+  modal.setAttribute('aria-hidden', 'false');
+}

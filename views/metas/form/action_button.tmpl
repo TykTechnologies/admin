@@ -1,0 +1,32 @@
+{{ $actionBtn := raw_value_of .ResourceValue .Meta}}
+<div>
+  <button type="button" onclick="toggleModal('{{.InputId}}-modal')" class="tyk-button tyk-button--{{$actionBtn.CssType}}">{{.Label}}</button>
+  <div id="{{.InputId}}-modal" class="qor-modal fade hidden" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="mdl-card mdl-shadow--2dp" role="document">
+          <div class="mdl-card__title">
+              <h2 class="mdl-card__title-text">{{.Label}}</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+              <div class="mdl-textfield mdl-textfield--full-width mdl-js-textfield">
+                {{ range $actionBtn.ModalContentText }}
+                  <p>{{.}}</p>
+                {{ end }}
+              </div>
+          </div>
+          <div class="mdl-card__actions">
+              <a class="mdl-button mdl-button--colored mdl-button--raised" onclick="test()">{{$actionBtn.ModalConfirmText}}</a>
+              <a class="mdl-button mdl-button--colored" data-dismiss="modal">{{$actionBtn.ModalDismissText}}</a>
+          </div>
+          <div class="mdl-card__menu">
+              <button class="mdl-button mdl-button--icon" data-dismiss="modal" aria-label="close">
+                  <i class="material-icons">close</i>
+              </button>
+          </div>
+      </div>
+  </div>
+  <script>
+    function test() {
+
+    }
+  </script>
+</div>
