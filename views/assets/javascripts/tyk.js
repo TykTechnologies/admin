@@ -61,15 +61,39 @@ document.addEventListener(
 function revealValue(elemId, emelValueId) {
   const codeRefEl = document.getElementById(elemId);
   const codeRefElValue = document.getElementById(emelValueId);
-  console.log(elemId)
-  console.log(emelValueId)
+  console.log(elemId);
+  console.log(emelValueId);
   if (codeRefEl.value === codeRefElValue.value) codeRefEl.value = '******';
-  else codeRefEl.value = codeRefElValue.value
+  else codeRefEl.value = codeRefElValue.value;
 }
 
-function toggleModal(id) {
+function actionButtonToggleModal(id) {
   var modal = document.getElementById(id);
   modal.classList.contains('hidden') ? modal.classList.remove('hidden') : modal.classList.add('hidden');
-  modal.classList.contains('show') ? modal.classList.remove('show') : modal.classList.add('show');
-  modal.setAttribute('aria-hidden', 'false');
+}
+
+function actionButtonExecute(actionbuttonModalId, url, method, data, datatype) {
+  $.ajax(url, {
+    xhrFields: {
+      withCredentials: true,
+    },
+    method,
+    data,
+    dataType: datatype || 'json',
+    beforeSend: function (xhr) {
+      // console.log('beforeSend');
+    },
+    success: function (data) {
+      console.log('success.data:', data);
+    },
+    error: function (err) {
+      if (err.status == 200) {
+        return;
+      }
+    },
+    complete: function (response) {
+      // console.log('response: ', response);
+      actionButtonToggleModal(actionbuttonModalId);
+    },
+  });
 }
