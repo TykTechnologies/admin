@@ -11,16 +11,22 @@
   {{end}}
   {{ if .Note}}
     <div class="alert alert-info" role="alert">
-      <i class="tyk-icon tykon tykon-warning "></i>
+      <i class="tyk-icon tykon tykon-warning"></i>
       <div class="alert__content">{{t (printf "%v.form.sections.%v" .Section.Resource.ToParam .Note) .Note}}</div>
     </div>
   {{end}}
-
-  <div {{if .Title}}class="qor-fieldset"{{end}}>
+  {{ if .EmptySectionNote }}
+    <div class="alert alert-info" role="alert">
+      <i class="tyk-icon tykon tykon-warning"></i>
+      <div class="alert__content">{{t (printf "%v.form.sections.%v" .Section.Resource.ToParam .EmptySectionNote) .EmptySectionNote}}</div>
+    </div>
+  {{else}}
+  <div {{if .Title }}class="qor-fieldset"{{end}}>
     {{range .Rows}}
       <div class="qor-form-section-rows qor-section-columns-{{.Length}} clearfix">
         {{.ColumnsHTML}}
       </div>
     {{end}}
   </div>
+  {{end}}
 </div>

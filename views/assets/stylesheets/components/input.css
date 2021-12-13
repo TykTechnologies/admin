@@ -1,13 +1,13 @@
 .qor-field .mdl-textfield__label,
 .qor-field__label {
-	color: var(--default-text-color);
-	font-family: 'OpenSans-Semibold';
-	font-size: var(--size-sm);
+  color: var(--default-text-color);
+  font-family: 'OpenSans-Semibold', sans-serif;
+  font-size: var(--size-sm);
 }
 
 ::-webkit-input-placeholder {
-	font-family: 'OpenSans-SemiBold';
-	color: var(--primary-base);
+  font-family: 'OpenSans-SemiBold', sans-serif;
+  color: var(--primary-base);
   opacity: 0.8;
   padding-left: 5px;
 }
@@ -25,19 +25,19 @@
 /* Search input */
 
 .mdl-textfield__input.qor-search__input {
-	border-bottom: var(--default-border);
+  border-bottom: var(--default-border);
   background-color: var(--white);
   min-width: 240px;
-	padding: 10px 20px 10px 40px;
+  padding: 10px 20px 10px 40px;
 }
 
 .qor-global-search.is-dirty .qor-search__clear,
 .qor-global-search.is-focused .qor-search__clear,
 .qor-search.is-dirty .qor-search__clear,
 .qor-search.is-focused .qor-search__clear {
-	right: 11px;
-	left: auto;
-	top: 18px;
+  right: 11px;
+  left: auto;
+  top: 18px;
 }
 
 .qor-search > .mdl-button.qor-search__label {
@@ -51,19 +51,19 @@
 }
 
 .qor-search__clear > i {
-	color: var(--default-text-color);
+  color: var(--default-text-color);
 }
 
 .mdl-button.qor-search__label:hover,
 .mdl-button.qor-search__label:active,
 .mdl-button.qor-search__label:focus {
-	background-color: var(--primary-light);
-	cursor: default;
+  background-color: var(--primary-light);
+  cursor: default;
 }
 
 .qor-global-search .qor-search__label,
 .qor-search .qor-search__label {
-	color: var(--default-text-color);
+  color: var(--default-text-color);
 }
 
 /* Icons inside input */
@@ -72,33 +72,33 @@
 .qor-field__datetimepicker .qor-action__datepicker,
 .qor-field__datepicker .qor-action__timepicker,
 .qor-field__datetimepicker .qor-action__timepicker {
-	bottom: 4px;
+  bottom: 4px;
 }
 
 .qor-field__datepicker .qor-action__timepicker,
 .qor-field__datetimepicker .qor-action__timepicker {
-	right: 5px;
+  right: 5px;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 736px) {
-.qor-search .qor-search__label {
+  .qor-search .qor-search__label {
     top: 16px !important;
+  }
 }
-
 /*
-	End 
+	End
 */
 
 /*
-	Media Queries 
+	Media Queries
 */
 
 @media only screen and (min-width: 320px) and (max-width: 732px) {
-	.qor-search .qor-search__label {
-		top: 17px !important;
-	}
+  .qor-search .qor-search__label {
+    top: 17px !important;
+  }
 }
 
 /*
-	End 
+	End
 */

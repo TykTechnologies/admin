@@ -44,12 +44,56 @@ function hideHelpSection() {
   localStorage.setItem('hideHelpSection', 'hidden');
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  let overviewToggleButton = document.querySelector('.toggle-help-section');
-  let overviewToggleSection = document.querySelector('.help-section');
+document.addEventListener(
+  'DOMContentLoaded',
+  function () {
+    let overviewToggleButton = document.querySelector('.toggle-help-section');
+    let overviewToggleSection = document.querySelector('.help-section');
 
-  if(localStorage.getItem('hideHelpSection') === 'hidden') {
-    overviewToggleButton.style.display = 'none';
-    overviewToggleSection.style.display = 'none';
-  }
-}, false);
+    if (localStorage.getItem('hideHelpSection') === 'hidden') {
+      overviewToggleButton.style.display = 'none';
+      overviewToggleSection.style.display = 'none';
+    }
+  },
+  false
+);
+
+function revealValue(elemId, emelValueId) {
+  const codeRefEl = document.getElementById(elemId);
+  const codeRefElValue = document.getElementById(emelValueId);
+  console.log(elemId);
+  console.log(emelValueId);
+  if (codeRefEl.value === codeRefElValue.value) codeRefEl.value = '******';
+  else codeRefEl.value = codeRefElValue.value;
+}
+
+function actionButtonToggleModal(id) {
+  var modal = document.getElementById(id);
+  modal.classList.contains('hidden') ? modal.classList.remove('hidden') : modal.classList.add('hidden');
+}
+
+function actionButtonExecute(actionbuttonModalId, url, method, data, datatype) {
+  $.ajax(url, {
+    xhrFields: {
+      withCredentials: true,
+    },
+    method,
+    data,
+    dataType: datatype || 'json',
+    beforeSend: function (xhr) {
+      // console.log('beforeSend');
+    },
+    success: function (data) {
+      console.log('success.data:', data);
+    },
+    error: function (err) {
+      if (err.status == 200) {
+        return;
+      }
+    },
+    complete: function (response) {
+      // console.log('response: ', response);
+      actionButtonToggleModal(actionbuttonModalId);
+    },
+  });
+}
