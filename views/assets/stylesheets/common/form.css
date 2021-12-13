@@ -205,3 +205,7 @@
 .qor-field.collection-edit.qor-fieldset-container > .qor-field__block > .qor-fieldset {
 	border: none;
 }
+
+.mdl-card__actions-modal {
+	text-align: right;
+}

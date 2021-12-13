@@ -13,9 +13,9 @@
                 {{ end }}
               </div>
           </div>
-          <div class="mdl-card__actions">
-              <a class="mdl-button mdl-button--colored mdl-button--raised" onclick="actionButtonExecute('{{.InputId}}-modal', '{{unsafe_raw $actionBtn.URL}}', '{{$actionBtn.Method}}', {{$actionBtn.Params}})">{{$actionBtn.ModalConfirmText}}</a>
-              <a class="mdl-button mdl-button--colored" onclick="actionButtonToggleModal('{{.InputId}}-modal')">{{$actionBtn.ModalDismissText}}</a>
+          <div class="mdl-card__actions mdl-card__actions-modal">
+              <a class="tyk-button tyk-button--primary-outline tyk-button--md qor-button--cancel" onclick="actionButtonToggleModal('{{.InputId}}-modal')">{{$actionBtn.ModalDismissText}}</a>
+              <a class="tyk-button tyk-button--{{$actionBtn.CssType}}" onclick="actionButtonExecute('{{.InputId}}-modal', '{{unsafe_raw $actionBtn.URL}}', '{{$actionBtn.Method}}', {{$actionBtn.Params}})">{{$actionBtn.ModalConfirmText}}</a>
           </div>
       </div>
   </div>
