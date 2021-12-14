@@ -80,3 +80,105 @@
 .tyk-form-control.redactor-source.redactor-source-open:active {
 	border: none !important;
 }
+
+/* Toolbar */
+.redactor-component-active[data-redactor-type=image] img {
+  outline: 2px solid #C3C3E5 !important;
+}
+
+.redactor-modal-header {
+  font-family: 'OpenSans-Semibold';
+}
+
+.redactor-context-toolbar.open .redactor-modal-body,
+.redactor-modal label,
+.redactor-modal-header,
+.redactor-context-toolbar.open a:hover,
+.redactor-modal button.redactor-button-unstyled {
+  color: var(--default-text-color)
+}
+
+.redactor-context-toolbar {
+  background-color: var(--primary-light);
+  color: white;
+}
+
+.redactor-context-toolbar.open a:hover {
+  text-decoration: underline;
+}
+
+.redactor-modal button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  display: inline-block;
+  font-family: OpenSans-Bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .2s linear;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  padding: 8px 23px;
+  font-size: 14px;
+  line-height: 22px;
+  border-radius: 20px;
+}
+
+.redactor-modal-footer button[data-command="save"] {
+  background-color: #00d9ba;
+  color: #fff;
+  border: 2px solid #00d9ba;
+}
+
+.redactor-modal-footer button[data-command="save"]:hover {
+  background-color: #00b798;
+  color: #fff;
+}
+
+.redactor-modal button.redactor-button-danger {
+  background-color: #ff6c7d;
+  color: #fff;
+  border: 2px solid #ff6c7d;
+}
+
+.redactor-modal button.redactor-button-danger:hover {
+  background-color: #ea4766;
+  color: #fff;
+}
+
+.redactor-button-unstyled {
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: #7a79a1;
+}
+
+.redactor-modal button.redactor-button-unstyled:hover {
+  background-color: transparent;
+  color: #7a79a1;
+  border-color: #7a79a1;
+  text-decoration: underline;
+}
+
+.form-item input {
+  border: var(--default-border);
+  color: var(--default-text-color);
+  border-radius: var(--default-border-radius);
+  font-family: 'OpenSans-SemiBold';
+  font-size: 14px;
+  line-height: 19px;
+  background-color: #fff;
+  display: block;
+  height: 39px;
+  padding: 10px 20px;
+}
+
+.redactor-modal input:focus,
+.redactor-modal select:focus,
+.redactor-modal textarea:focus
+.redactor-modal input:hover,
+.redactor-modal select:hover,
+.redactor-modal textarea:hover {
+  border: var(--success-border);
+}
