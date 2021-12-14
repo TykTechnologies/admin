@@ -127,37 +127,37 @@
 }
 
 .redactor-modal-footer button[data-command="save"] {
-  background-color: #00d9ba;
+  background-color: var(--primary-success);
   color: #fff;
-  border: 2px solid #00d9ba;
+  border: var(--success-border);
 }
 
 .redactor-modal-footer button[data-command="save"]:hover {
-  background-color: #00b798;
+  background-color: var(--primary-dark);
   color: #fff;
 }
 
 .redactor-modal button.redactor-button-danger {
-  background-color: #ff6c7d;
+  background-color: var(--primary-danger);
   color: #fff;
-  border: 2px solid #ff6c7d;
+  border: 2px solid var(--primary-danger);
 }
 
 .redactor-modal button.redactor-button-danger:hover {
-  background-color: #ea4766;
+  background-color: var(--text-on-red-background);
   color: #fff;
 }
 
 .redactor-button-unstyled {
   background-color: transparent;
   border: 2px solid transparent;
-  color: #7a79a1;
+  color: var(--secondary);
 }
 
 .redactor-modal button.redactor-button-unstyled:hover {
   background-color: transparent;
-  color: #7a79a1;
-  border-color: #7a79a1;
+  color: var(--secondary);
+  border-color: var(--secondary);
   text-decoration: underline;
 }
 
